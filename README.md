@@ -48,3 +48,43 @@ export default tseslint.config({
   },
 })
 ```
+
+## Getting Started
+
+### Prerequisites
+
+- [Bun](https://bun.sh/) runtime
+- Node.js 18 or later
+- [MetaMask](https://metamask.io/) extension for interacting with the dApp
+
+### Install dependencies
+
+```bash
+bun install
+```
+
+### Development server
+
+```bash
+bun run dev
+```
+
+### Production build
+
+```bash
+bun run build
+```
+
+### Lint and format
+
+Run Biome lints and TypeScript checks:
+
+```bash
+bun run lint
+```
+
+Format all files:
+
+```bash
+bun run format
+```

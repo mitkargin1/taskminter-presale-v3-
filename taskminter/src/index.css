@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 7%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 157 49% 48%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 14%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 14%;
+  --muted-foreground: 0 0% 63.9%;
+  --accent: 0 0% 14%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 14.9%;
+  --input: 0 0% 14.9%;
+  --ring: 157 49% 48%;
+  --radius: 0.75rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: theme('colors.midnight');
+  color: theme('colors.neon');
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Animated Background */
+.gradient-bg {
+  background: linear-gradient(45deg, #111111, #1a1a1a, #111111, #1a1a1a);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+/* Glowing Effect */
+.text-glow {
+  text-shadow: 0 0 10px rgba(62, 180, 137, 0.5), 0 0 20px rgba(62, 180, 137, 0.3);
+}
+
+.btn-glow {
+  box-shadow: 0 0 10px rgba(62, 180, 137, 0.5), 0 0 20px rgba(62, 180, 137, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3EB489;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a7d5e;
+}
+
+/* Custom Section Classes */
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-center text-glow;
+  }
+
+  .btn-primary {
+    @apply bg-mint text-midnight font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-opacity-90 hover:scale-105 btn-glow;
+  }
+}
